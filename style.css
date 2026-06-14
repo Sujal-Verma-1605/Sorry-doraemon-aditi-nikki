@@ -198,13 +198,12 @@ button:active{
 
 .gallery{
     width:100%;
-    height:320px;
+    height:500px;
     position:relative;
     overflow:hidden;
     border-radius:20px;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.15);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    margin:20px 0;
 }
 
 .slide{
@@ -215,20 +214,16 @@ button:active{
     width:100%;
     height:100%;
 
-    object-fit:cover;
+    object-fit:contain; /* Shows full image */
 
     opacity:0;
+    transition:opacity 1s ease-in-out;
 
-    transition:
-    opacity 1s ease-in-out,
-    transform 1s ease-in-out;
-
-    transform:scale(1.05);
+    background:white;
 }
 
 .slide.active{
     opacity:1;
-    transform:scale(1);
 }
 
 .heart{
